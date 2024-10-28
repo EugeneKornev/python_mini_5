@@ -22,7 +22,14 @@ def test():
     6
     >>> specialize(bisum)(6, 5)
     11
+    >>> specialize(bisum, 1, 5)(6)
+    Traceback (most recent call last):
+     ...
+    TypeError: bisum() takes 2 positional arguments but 3 were given
+    >>> specialize(bisum, 1, 5)(a=6)
+    Traceback (most recent call last):
+     ...
+    TypeError: bisum() got an unexpected keyword argument 'a'
     """
     return 0
-
 
